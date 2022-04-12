@@ -4,4 +4,6 @@ export interface ICcPersonalizeRestProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  userLoginName: string;
+  userEmail: string;
 }

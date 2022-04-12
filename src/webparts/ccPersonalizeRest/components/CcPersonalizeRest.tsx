@@ -4,15 +4,28 @@ import { ICcPersonalizeRestProps } from './ICcPersonalizeRestProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRestProps, {}> {
+
+
+
+
+
+
+
   public render(): React.ReactElement<ICcPersonalizeRestProps> {
     const {
       description,
       isDarkTheme,
       environmentMessage,
       hasTeamsContext,
+      userLoginName,
+      userEmail,
       userDisplayName
     } = this.props;
 
+
+
+
+    
     return (
       <section className={`${styles.ccPersonalizeRest} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.welcome}>
@@ -23,6 +36,37 @@ export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRes
         </div>
         <div>
           <h3>Welcome to SharePoint Framework!</h3>
+          <table className={styles.tables}>
+            <tr>
+              <td className={styles.tables}>
+              userDiplayName
+              </td>
+              <td className={styles.tables}>
+              {escape(userDisplayName)}
+              </td>
+            </tr>
+            <tr>
+              <td className={styles.tables}>
+              userLoginName
+              </td>
+              <td className={styles.tables}>
+              {escape(userLoginName)}
+              </td>
+            </tr>
+            <tr>
+              <td className={styles.tables}>
+              userEmail
+              </td>
+              <td className={styles.tables}>
+              {escape(userEmail)}
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>userDiplayName: {escape(userDisplayName)}</li>
+            <li>userLoginName: {escape(userLoginName)}</li>
+            <li>userEmail: {escape(userEmail)}</li>
+          </ul>
           <p>
             The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
           </p>

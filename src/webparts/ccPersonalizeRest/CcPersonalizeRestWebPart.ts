@@ -35,6 +35,8 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userLoginName: this.context.pageContext.user.loginName,
+        userEmail: this.context.pageContext.user.email,
         userDisplayName: this.context.pageContext.user.displayName
       }
     );

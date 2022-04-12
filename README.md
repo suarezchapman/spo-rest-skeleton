@@ -2,9 +2,11 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+Framework for consuming REST APIs to personalize Chapman and Cutler SPO web parts. Uses React. Primary target is Logic Apps in Azure talking to third party APIs and SQL.
 
-[picture of the solution in action, if possible]
+> Short summary on functionality and used technologies.
+> 
+> [picture of the solution in action, if possible]
 
 ## Used SharePoint Framework Version
 
@@ -21,18 +23,20 @@ Short summary on functionality and used technologies.
 
 > Any special pre-requisites?
 
+Created with Node 14+
+
 ## Solution
 
-Solution|Author(s)
---------|---------
-folder name | Author details (name, company, twitter alias with link)
+| Solution    | Author(s)                                               |
+| ----------- | ------------------------------------------------------- |
+| folder name | Author details (name, company, twitter alias with link) |
 
 ## Version history
 
-Version|Date|Comments
--------|----|--------
-1.1|March 10, 2021|Update comment
-1.0|January 29, 2021|Initial release
+| Version | Date           | Comments                            |
+| ------- | -------------- | ----------------------------------- |
+| .0.1    | April 12, 2022 | Created                             |
+| .0.2    | April 12, 2022 | Added sp properties for user email? |
 
 ## Disclaimer
 
