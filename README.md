@@ -56,7 +56,7 @@ Created with Node 14+
 
 ## Features
 
-Description of the extension that expands upon high-level summary above.
+Dev. Description of the extension that expands upon high-level summary above.
 
 This extension illustrates the following concepts:
 
