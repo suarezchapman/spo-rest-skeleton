@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "cc-personalize-rest-client-side-solution",
+    "id": "8b92ebb8-630c-429c-9c6c-fb5e0d4d9c51",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "cc-personalize-rest description"
+      },
+      "longDescription": {
+        "default": "cc-personalize-rest description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "cc-personalize-rest Feature",
+        "description": "The feature that activates elements of the cc-personalize-rest solution.",
+        "id": "3acd04a4-adbd-4302-ac35-002c5d2f905e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/cc-personalize-rest.sppkg"
+  }
+}
