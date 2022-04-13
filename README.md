@@ -4,9 +4,6 @@
 
 Framework for consuming REST APIs to personalize Chapman and Cutler SPO web parts. Uses React. Primary target is Logic Apps in Azure talking to third party APIs and SQL.
 
-> Short summary on functionality and used technologies.
-> 
-> [picture of the solution in action, if possible]
 
 ## Used SharePoint Framework Version
 
@@ -17,7 +14,6 @@ Framework for consuming REST APIs to personalize Chapman and Cutler SPO web part
 - [SharePoint Framework](https://aka.ms/spfx)
 - [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
 
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
 
 ## Prerequisites
 

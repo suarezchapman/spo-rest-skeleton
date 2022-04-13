@@ -6,6 +6,12 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+
+import {
+  HttpClient,
+  HttpClientResponse
+} from '@microsoft/sp-http';
+
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'CcPersonalizeRestWebPartStrings';
@@ -28,20 +34,26 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
   }
 
   public render(): void {
-    const element: React.ReactElement<ICcPersonalizeRestProps> = React.createElement(
-      CcPersonalizeRest,
-      {
-        description: this.properties.description,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userLoginName: this.context.pageContext.user.loginName,
-        userEmail: this.context.pageContext.user.email,
-        userDisplayName: this.context.pageContext.user.displayName
-      }
-    );
-
-    ReactDom.render(element, this.domElement);
+    if (!this.renderedOnce) {
+      this._getJoke()
+        .then(response => {
+          const element: React.ReactElement<ICcPersonalizeRestProps > = React.createElement(
+            CcPersonalizeRest,
+            {
+              JokeText : response,
+              description: this.properties.description,
+              isDarkTheme: this._isDarkTheme,
+              environmentMessage: this._environmentMessage,
+              hasTeamsContext: !!this.context.sdks.microsoftTeams,
+              userLoginName: this.context.pageContext.user.loginName,
+              userEmail: this.context.pageContext.user.email,
+              userDisplayName: this.context.pageContext.user.displayName
+            }
+          );
+  
+          ReactDom.render(element, this.domElement);
+        });
+    }
   }
 
   private _getEnvironmentMessage(): string {
@@ -67,8 +79,22 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
 
   }
 
+
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
+  }
+
+  private _getJoke(): Promise<any> {
+    return this.context.httpClient.get(
+      `https://geek-jokes.sameerkumar.website/api`,
+      HttpClient.configurations.v1
+    )
+    .then((response: HttpClientResponse) => {
+      return response.text();
+    })
+    .then(textResponse => {
+      return textResponse;
+    }) as Promise<any>;
   }
 
   protected get dataVersion(): Version {

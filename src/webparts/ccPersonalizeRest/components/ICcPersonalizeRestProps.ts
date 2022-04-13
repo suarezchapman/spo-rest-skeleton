@@ -6,4 +6,7 @@ export interface ICcPersonalizeRestProps {
   userDisplayName: string;
   userLoginName: string;
   userEmail: string;
+  
+  // ThirdPartyAPI
+  JokeText: any;
 }

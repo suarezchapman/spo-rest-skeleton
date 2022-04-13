@@ -6,11 +6,6 @@ import { escape } from '@microsoft/sp-lodash-subset';
 export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRestProps, {}> {
 
 
-
-
-
-
-
   public render(): React.ReactElement<ICcPersonalizeRestProps> {
     const {
       description,
@@ -19,11 +14,9 @@ export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRes
       hasTeamsContext,
       userLoginName,
       userEmail,
-      userDisplayName
+      userDisplayName,
+      JokeText
     } = this.props;
-
-
-
 
     
     return (
@@ -35,7 +28,20 @@ export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRes
           <div>Web part property value: <strong>{escape(description)}</strong></div>
         </div>
         <div>
-          <h3>Welcome to SharePoint Framework!</h3>
+          <h3>Cuckhead Chuck</h3>
+
+          <table className={styles.tables}>
+            <tr>
+              <td className={styles.tables}>
+              {JokeText}
+              </td>
+            </tr>
+          </table>
+
+          <hr />
+          
+          <h3>Page Properties (pageContext.user)</h3>
+
           <table className={styles.tables}>
             <tr>
               <td className={styles.tables}>
@@ -62,14 +68,7 @@ export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRes
               </td>
             </tr>
           </table>
-          <ul>
-            <li>userDiplayName: {escape(userDisplayName)}</li>
-            <li>userLoginName: {escape(userLoginName)}</li>
-            <li>userEmail: {escape(userEmail)}</li>
-          </ul>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
+          
           <h4>Learn more about SPFx development:</h4>
           <ul className={styles.links}>
             <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
