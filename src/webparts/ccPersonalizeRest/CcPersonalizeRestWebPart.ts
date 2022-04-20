@@ -50,7 +50,7 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
               userDisplayName: this.context.pageContext.user.displayName
             }
           );
-  
+
           ReactDom.render(element, this.domElement);
         });
     }
@@ -85,10 +85,19 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
   }
 
   private _getJoke(): Promise<any> {
+    /*
     return this.context.httpClient.get(
       `https://geek-jokes.sameerkumar.website/api`,
       HttpClient.configurations.v1
     )
+    */
+
+    return this.context.httpClient.get(
+      `https://prod-05.northcentralus.logic.azure.com/workflows/d39d62a5b544437199449debc22f2127/triggers/manual/paths/invoke/user/` + this.context.pageContext.user.loginName + `?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=xkKS0wqSX2o7-OcjpZ09EmqyRIqayP0XHvTtmvfaZIs`,
+      HttpClient.configurations.v1
+    )
+
+
     .then((response: HttpClientResponse) => {
       return response.text();
     })
