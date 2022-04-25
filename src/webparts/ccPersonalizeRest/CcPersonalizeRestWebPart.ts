@@ -40,7 +40,7 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
           const element: React.ReactElement<ICcPersonalizeRestProps > = React.createElement(
             CcPersonalizeRest,
             {
-              JokeText : response,
+              APIResult : response,
               description: this.properties.description,
               isDarkTheme: this._isDarkTheme,
               environmentMessage: this._environmentMessage,

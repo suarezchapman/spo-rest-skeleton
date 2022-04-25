@@ -8,5 +8,5 @@ export interface ICcPersonalizeRestProps {
   userEmail: string;
 
   // ThirdPartyAPI
-  JokeText: any;
+  APIResult: any;
 }
