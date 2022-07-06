@@ -35,7 +35,7 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
 
   public render(): void {
     if (!this.renderedOnce) {
-      this._getJoke()
+      this.__getAPIResult()
         .then(response => {
           const element: React.ReactElement<ICcPersonalizeRestProps > = React.createElement(
             CcPersonalizeRest,
@@ -84,7 +84,7 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  private _getJoke(): Promise<any> {
+  private __getAPIResult(): Promise<any> {
     /*
     return this.context.httpClient.get(
       `https://geek-jokes.sameerkumar.website/api`,
