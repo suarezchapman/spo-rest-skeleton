@@ -1,4 +1,4 @@
-declare interface ICcPersonalizeRestWebPartStrings {
+declare interface ICcRestSkeletonWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
@@ -8,7 +8,7 @@ declare interface ICcPersonalizeRestWebPartStrings {
   AppTeamsTabEnvironment: string;
 }
 
-declare module 'CcPersonalizeRestWebPartStrings' {
-  const strings: ICcPersonalizeRestWebPartStrings;
+declare module 'CcRestSkeletonWebPartStrings' {
+  const strings: ICcRestSkeletonWebPartStrings;
   export = strings;
 }

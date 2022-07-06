@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "cc-personalize-rest-client-side-solution",
-    "id": "8b92ebb8-630c-429c-9c6c-fb5e0d4d9c51",
+    "name": "cc-rest-skeleton-client-side-solution",
+    "id": "d803d2b9-2fee-4e55-a39a-0fcec866336e",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -16,10 +16,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "cc-personalize-rest description"
+        "default": "cc-rest-skeleton description"
       },
       "longDescription": {
-        "default": "cc-personalize-rest description"
+        "default": "cc-rest-skeleton description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -27,14 +27,14 @@
     },
     "features": [
       {
-        "title": "cc-personalize-rest Feature",
-        "description": "The feature that activates elements of the cc-personalize-rest solution.",
-        "id": "3acd04a4-adbd-4302-ac35-002c5d2f905e",
+        "title": "cc-rest-skeleton Feature",
+        "description": "The feature that activates elements of the cc-rest-skeleton solution.",
+        "id": "980f785f-333c-4e25-9813-b32e5521fc1e",
         "version": "1.0.0.0"
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/cc-personalize-rest.sppkg"
+    "zippedPackage": "solution/cc-rest-skeleton.sppkg"
   }
 }

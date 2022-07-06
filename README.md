@@ -1,4 +1,4 @@
-# cc-personalize-rest
+# cc-rest-skeleton
 
 ## Summary
 

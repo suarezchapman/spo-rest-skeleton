@@ -1,4 +1,4 @@
-export interface ICcPersonalizeRestProps {
+export interface ICcRestSkeletonProps {
   description: string;
   isDarkTheme: boolean;
   environmentMessage: string;

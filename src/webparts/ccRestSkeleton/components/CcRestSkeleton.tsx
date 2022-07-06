@@ -1,11 +1,11 @@
 import * as React from 'react';
-import styles from './CcPersonalizeRest.module.scss';
-import { ICcPersonalizeRestProps } from './ICcPersonalizeRestProps';
+import styles from './CcRestSkeleton.module.scss';
+import { ICcRestSkeletonProps } from './ICcRestSkeletonProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRestProps, {}> {
+export default class CcRestSkeleton extends React.Component<ICcRestSkeletonProps, {}> {
 
-  public render(): React.ReactElement<ICcPersonalizeRestProps> {
+  public render(): React.ReactElement<ICcRestSkeletonProps> {
     const {
       description,
       isDarkTheme,
@@ -31,7 +31,7 @@ export default class CcPersonalizeRest extends React.Component<ICcPersonalizeRes
     console.log(data[0]["HomeAddressStreet1"]);
 
     return (
-      <section className={`${styles.ccPersonalizeRest} ${hasTeamsContext ? styles.teams : ''}`}>
+      <section className={`${styles.ccRestSkeleton} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.welcome}>
           <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : 'https://webapps.chapman.com/fromneverest/ea-html/930/93/09/images/' + UserName + '.jpg'} className={styles.welcomeImage} />
           <h2>{escape(userDisplayName)}</h2>

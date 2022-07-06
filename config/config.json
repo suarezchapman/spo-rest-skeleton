@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "cc-personalize-rest-web-part": {
+    "cc-rest-skeleton-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/ccPersonalizeRest/CcPersonalizeRestWebPart.js",
-          "manifest": "./src/webparts/ccPersonalizeRest/CcPersonalizeRestWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/ccRestSkeleton/CcRestSkeletonWebPart.js",
+          "manifest": "./src/webparts/ccRestSkeleton/CcRestSkeletonWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "CcPersonalizeRestWebPartStrings": "lib/webparts/ccPersonalizeRest/loc/{locale}.js"
+    "CcRestSkeletonWebPartStrings": "lib/webparts/ccRestSkeleton/loc/{locale}.js"
   }
 }

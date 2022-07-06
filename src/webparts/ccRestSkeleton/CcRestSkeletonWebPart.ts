@@ -14,15 +14,15 @@ import {
 
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'CcPersonalizeRestWebPartStrings';
-import CcPersonalizeRest from './components/CcPersonalizeRest';
-import { ICcPersonalizeRestProps } from './components/ICcPersonalizeRestProps';
+import * as strings from 'CcRestSkeletonWebPartStrings';
+import CcRestSkeleton from './components/CcRestSkeleton';
+import { ICcRestSkeletonProps } from './components/ICcRestSkeletonProps';
 
-export interface ICcPersonalizeRestWebPartProps {
+export interface ICcRestSkeletonWebPartProps {
   description: string;
 }
 
-export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcPersonalizeRestWebPartProps> {
+export default class CcRestSkeletonWebPart extends BaseClientSideWebPart<ICcRestSkeletonWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
@@ -37,8 +37,8 @@ export default class CcPersonalizeRestWebPart extends BaseClientSideWebPart<ICcP
     if (!this.renderedOnce) {
       this.__getAPIResult()
         .then(response => {
-          const element: React.ReactElement<ICcPersonalizeRestProps > = React.createElement(
-            CcPersonalizeRest,
+          const element: React.ReactElement<ICcRestSkeletonProps > = React.createElement(
+            CcRestSkeleton,
             {
               APIResult : response,
               description: this.properties.description,
