@@ -35,7 +35,7 @@ export default class CcRestSkeletonWebPart extends BaseClientSideWebPart<ICcRest
 
   public render(): void {
     if (!this.renderedOnce) {
-      this.__getAPIResult()
+      this._getAPIResult()
         .then(response => {
           const element: React.ReactElement<ICcRestSkeletonProps > = React.createElement(
             CcRestSkeleton,
@@ -84,7 +84,7 @@ export default class CcRestSkeletonWebPart extends BaseClientSideWebPart<ICcRest
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  private __getAPIResult(): Promise<any> {
+  private _getAPIResult(): Promise<any> {
     /*
     return this.context.httpClient.get(
       `https://geek-jokes.sameerkumar.website/api`,
